@@ -9,7 +9,9 @@
 #import "ViewController.h"
 #import "IAmClassA.h"
 
-@interface ViewController ()
+@interface ViewController () {
+    IAmClassA * A;
+}
 
 @end
 
@@ -28,7 +30,7 @@
 }
 
 - (void)btnClick:(id)sender{
-    IAmClassA * A = [[IAmClassA alloc] initWithTextQueryWith:@"233333"];
+    A = [[IAmClassA alloc] initWithTextQueryWith:@"233333"];
                      
     [A showWithCompletionBlock:^(void) {
         // do some thing
