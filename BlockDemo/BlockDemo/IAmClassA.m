@@ -23,6 +23,10 @@
     return self;
 }
 
+- (void)dealloc{
+    NSLog(@"哈哈，A终于被释放了");
+}
+
 - (void)showWithCompletionBlock:(IAmClassACompletion)completionBlock{
     _completionBlock = [completionBlock copy];
     dispatch_async(dispatch_get_main_queue(), ^{
